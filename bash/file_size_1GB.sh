@@ -1,8 +1,14 @@
 #!/bin/bash/sh
 echo "enter path : "
-path = "./mnt/d/Documents/GitHub/command_line_programing/bash"
-#read path
+read path
 for file in $(ls $path)
 do
-    echo $path
+    if [ -f "$path/$file" ];then
+
+        size=$(wc -c "$path/$file" | awk '{print $1}')
+
+        if [ $size -gt 1000000000 ];then
+            echo $file  $size
+        fi
+    fi
 done
