@@ -1,4 +1,4 @@
-#!/bin/bash/sh
+#!/bin/bash
 echo "enter path : "
 read path
 for file in $(ls $path)
