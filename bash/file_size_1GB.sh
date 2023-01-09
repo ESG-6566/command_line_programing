@@ -1,4 +1,5 @@
 #!/bin/bash
+#This script takes a path and displays all files and directories larger than 1GB.
 echo "enter path : "
 read path
 for file in $(ls $path)
